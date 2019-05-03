@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Poultry Farm</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- adding jQuery, Bootstrap, and Font Awesome -->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+		<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+		</script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- end adding jQuery, Bootstrap, and Font Awesome -->
+	</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-3">
+		<h3 class="text-center">Info <i class="fa fa-info-circle"></i></h3>
+		<div class="well">
+			<div class="text-center">
+				<button class="btn btn-success btn-lg" onClick="save()">Save <i class="fa fa-save"></i></button>
+				<button class="btn btn-primary btn-lg" onclick="load()">Load <i class="fa fa-history"></i></button>
+			</div>
+			<div class="text-center">
+			<br><br>
+			<h2>Instructions:</h2>
+			<p>You are supposed to click on the chicken to produce EGGS! Give it a try!</p>
+			<br><br>
+			</div>
+			<div class="row" id="footer">
+		  <div class="text-center">
+		    <i>My Little Poultry Farm by Sherzod Abdussadykov; &copy; 2019</i>
+		  </div>
+	</div>
+		</div>
+		</div>
+		<div id="clicker" class="col-xs-6">
+			<div id="content" class="text-center">
+				<!--You could put status messages here -->
+				<p id="topic">Your farm has no name!</p>
+			</div>
+			<div class="text-center">
+			<h3>My Little Poultry Farm <i class="fa fa-home"></i></h3>
+			<button id="hen" class="btn btn-default btn-md col-xs-6" onclick="add()"><img src="hen1.png"></button>
+			<br><br><br><br><br><br>
+			<div class="col-xs-6">
+			  <div class="row machine-wrap">
+				 <div>
+					<div  id="quoteBody"></div>    
+				</div>
+			  </div>
+			</div>
+			<br><br><br><br><br><br>
+			<h4></h4>
+			<input type="text" id="text" class="form-control text-center" disabled value=0>
+			<br><p id="eggspersecond">per second: 0</p>
+			</div>
+			
+		</div>
+		<div class="col-xs-3">
+			<h3 class="text-center">Store <i class="fa fa-shopping-cart"></i></h3>
+			<div class="well text-center">
+				
+			   
+				<p>Auto Clicker</p>
+				<button id="finger" class="btn btn-default btn-lg col-xs-8" onClick="buyAutoClick()"><img src="finger.png"></button>
+				<br><p id="costAutoClick">15 Eggs</p>
+				<button class="btn btn-default btn-xs col-xs-8" onClick="buyAutoClick()">+1 egg/s</button>
+				<h3 id="ammountAutoClick">0</h3>
+			   
+				<br><br><br>
+			   
+				<p>Farm</p>
+				<button id="farm" class="btn btn-default btn-xs col-xs-8" onClick="buyFarm()"><img src="chicken-pen.png"></button>
+				<br><p id="costFarms">75 Eggs</p>
+				<button class="btn btn-default btn-xs col-xs-8">+2 egg/s</button>
+				<h3 id="ammountFarms">0</h3>
+				
+				<br><br><br><br>
+				
+				<p id="ammountMultiplier">Chicken Upgrade</p>
+				<button id="chicken" class="btn btn-default btn-xs col-xs-8" onClick="buyMultiplier()"><img src="hen2.png"></button>
+				<br><br>
+				<p id="costMultiplier">200 Eggs</p>
+				<p id="currentMultiplier">Current Level: X1</p>
+				<button class="btn btn-default btn-xs col-xs-8"  id="ammountMultiplier2">multiply by X2</button>
+				
+				<br><br>
+			</div>
+		</div>
+	</div>
+	<div class="text-center">
+		    <span id="saving-status-2">
+		       Saved
+		    </span>
+	</div>
+</div>   
+    <script type="text/javascript" src="java.js"></script>
+</body>
+</html>
