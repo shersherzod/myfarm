@@ -1,2 +1,2 @@
-# myfarm.github.io
+# sherzod.myfarm.github.io
 A clicker game
